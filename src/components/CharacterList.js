@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import Styled from 'styled-components';
+import SearchForm from './SearchForm'
 
 const Section = Styled.section`
    display : flex;
@@ -21,7 +22,7 @@ const H3 = Styled.h3`
 `
 const Img = Styled.img`
     border-radius: 50%;
-    
+
 `
 
 export default function CharacterList(props) {
@@ -48,8 +49,9 @@ export default function CharacterList(props) {
       return <h3>Loading...</h3>
     }
   return (
-    <Section className="character-list">
-      
+    <section className="character-list">
+      <SearchForm />
+      <Section>
       {
         characters.map(character =>{
           return(
@@ -60,6 +62,9 @@ export default function CharacterList(props) {
             );
         })
       }
-    </Section>
+        
+      </Section>
+      
+    </section>
   );
 }
