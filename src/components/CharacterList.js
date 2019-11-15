@@ -1,5 +1,28 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import Styled from 'styled-components';
+
+const Section = Styled.section`
+   display : flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin-top: 35px;
+   width: 80%;
+   margin-left: 8%;
+   margin-right: 8%;
+   margin-bottom: 35px;
+
+`
+const Div = Styled.div`
+    width: 40%;
+`
+const H3 = Styled.h3` 
+ text-align: center;
+`
+const Img = Styled.img`
+    border-radius: 50%;
+    
+`
 
 export default function CharacterList(props) {
   // TODO: Add useState to track data from useEffect
@@ -25,18 +48,18 @@ export default function CharacterList(props) {
       return <h3>Loading...</h3>
     }
   return (
-    <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
+    <Section className="character-list">
+      
       {
         characters.map(character =>{
           return(
-         <div key={character.id}>
-          <img  src={character.image} alt={`${character.name}  image`}/>
-              <p>{character.name}</p>
-            </div>
+         <Div key={character.id}>
+          <Img  src={character.image} alt={`${character.name}  image`}/>
+              <H3>{character.name}</H3>
+            </Div>
             );
         })
       }
-    </section>
+    </Section>
   );
 }
