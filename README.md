@@ -28,7 +28,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 - [ ]  Explain benefit(s) using `client-side routing`?
 
 > Answer:
-
+Client side routing is when route is changed internally using Javascript that gives us a different page without changing the HTML page this results to less data being processed and therefore routing between pages is  more faster compared to Server side routing.  
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
